@@ -12,7 +12,7 @@
 // Обновляй интерфейс новым значением переменной counterValue.
 
 
-,
+
 
     const wrap_button = {
         sub: document.querySelector("[data-action='increment']"),
@@ -33,4 +33,4 @@
         document.getElementById('value').textContent = counterValue;
     };
     wrap_button.sub.addEventListener('click', increment);
-    wrap_button.add.addEventListener('click', decrement);}
+    wrap_button.add.addEventListener('click', decrement);
