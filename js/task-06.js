@@ -17,17 +17,45 @@
 // используй CSS-классы valid и invalid, 
 // которые мы уже добавили в исходные файлы задания.
 
-// #validation-input {
-//   border: 3px solid #bdbdbd;
-// }
 
-// #validation-input.valid {
-//   border-color: #4caf50;
-// }
+// /____________________________________________
 
-// #validation-input.invalid {
-//   border-color: #f44336;
-// }
+// document.getElementById("validation-input").onblur = function() {
+//     console.log(this.value.length);
+//     if (this.getAttribute('data-length') > this.value.length) { 
+//     this.classList.remove('valid');
+//     this.classList.add('invalid');
+//     } else {
+//     this.classList.remove('invalid');
+//     this.classList.add('valid');
+//     }
+//     };
+
+const textInput = document.getElementById("validation-input");
+
+
+textInput.addEventListener("blur", () => {
+        //console.log(textInput.value.length);
+        if (textInput.getAttribute('data-length') > textInput.value.length) { 
+            textInput.classList.remove('valid');
+            textInput.classList.add('invalid');
+        } else {
+            textInput.classList.remove('invalid');
+            textInput.classList.add('valid');
+        }
+    });
+// /______________________________________________
+
+// const validationInput = document.querySelector('#validation-input');
+// const validationInputValid = document.querySelector('#validation-input.valid');
+// const validationInputInvalid = document.querySelector('#validation-input.invalid');
+
+
+// removeFocusBtn.addEventListener("click", () => {
+//     textInput.blur();
+//     });
+
+
 
 // const textInput = document.querySelector(".text-input");
 // const setFocusBtn = document.querySelector('[data-action="set"]');
