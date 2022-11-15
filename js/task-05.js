@@ -15,10 +15,13 @@ const output = document.querySelector('#name-output');
 
 
 textInput.addEventListener('input',(event) => {
-output.textContent = event.currentTarget.value.length?event.currentTarget.value:"Anonim";
+output.textContent =
+event.currentTarget.value.length?event.currentTarget.value:"Anonymous";
+
+//  output.textContent = "Anonymous";
+//   if (event.currentTarget.value.length!=0) output.textContent =event.currentTarget.value";
+
+//   output.textContent =event.currentTarget.value";
+//   if (output.textContent.length!=0) output.textContent ="Anonymous";
 
 });
-
-
-
-
