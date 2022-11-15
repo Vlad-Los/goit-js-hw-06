@@ -10,10 +10,15 @@
 // <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
 
 
-const textInput = document.querySelector('#name -input');
+const textInput = document.querySelector('#name-input');
+const output = document.querySelector('#name-output');
 
-textInput.addEventListener('input',onFormInput);
 
-function onFormInput(event){
-    
-}
+textInput.addEventListener('input',(event) => {
+output.textContent = event.currentTarget.value.length?event.currentTarget.value:"Anonim";
+
+});
+
+
+
+
